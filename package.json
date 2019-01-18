@@ -19,7 +19,7 @@
     "jest": "24.0.0-alpha.12",
     "webpack": "^4.28.4",
     "webpack-cli": "^3.2.1",
-    "webpack-config-jaid": "1.10.0"
+    "webpack-config-jaid": "1.11.0"
   },
   "scripts": {
     "build:prod": "cross-env NODE_ENV=production webpack",
