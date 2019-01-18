@@ -27,6 +27,7 @@
     "test": "npm run build:prod && jest",
     "test:dev": "npm run build:dev && jest",
     "prepublishOnly": "npm run build:prod",
-    "prepare": "jest --clearCache"
+    "prepare": "jest --clearCache",
+    "release": "npm publish dist"
   }
 }
