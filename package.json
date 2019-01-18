@@ -1,6 +1,5 @@
 {
   "version": "1.0.0",
-  "license": "MIT",
   "babel": {
     "presets": [
       "jaid"
@@ -20,13 +19,14 @@
     "jest": "24.0.0-alpha.12",
     "webpack": "^4.28.4",
     "webpack-cli": "^3.2.1",
-    "webpack-config-jaid": "1.9.0"
+    "webpack-config-jaid": "1.10.0"
   },
   "scripts": {
     "build:prod": "cross-env NODE_ENV=production webpack",
-    "build:dev": "cross-env webpack",
+    "build:dev": "webpack",
     "test": "npm run build:prod && jest",
     "test:dev": "npm run build:dev && jest",
-    "prepublishOnly": "npm run build:prod"
+    "prepublishOnly": "npm run build:prod",
+    "prepare": "jest --clearCache"
   }
 }
