@@ -26,6 +26,7 @@
     "build:dev": "webpack",
     "test": "npm run build:prod && jest",
     "test:dev": "npm run build:dev && jest",
+    "test:debug": "node --inspect=9229 node_modules/jest/bin/jest.js --runInBand",
     "prepublishOnly": "npm run build:prod",
     "prepare": "jest --clearCache",
     "release": "npm publish dist"
