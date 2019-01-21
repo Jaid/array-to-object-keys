@@ -9,11 +9,6 @@ export default webpackConfigJaid({
   publishimo: {
     publishimoOptions: {
       fetchGithub: true,
-      author: {
-        name: "Jaid",
-        email: "jaid.jsx@gmail.com",
-        github: true,
-      },
     },
   },
 })
