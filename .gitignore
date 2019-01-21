@@ -13,6 +13,7 @@
 /npm-debug.log.*
 
 # pnpm
+/pnpm-debug.log
 /shrinkwrap.yaml
 
 # Generated or temporary content
