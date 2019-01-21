@@ -1,3 +1,6 @@
 language: node_js
-node_js: [node, lts/*] # Latest node version and latest node LTS version
-os: [linux, windows, osx]
+node_js: [node, lts/*]
+os: [linux, osx]
+env:
+  global:
+    secure: Qjlx1Ko0w33ama7VctY5crOUeGV3SzoaBjCGtdscCDYlV9e015sbeQ1soCcENfALN+MVrdVkb+d7pkT2oRIEApGJm6M5xWMhoGNpolcfkVA043dWeVVL9320ntK8uLJn+IJtw4cZJ5lhscM6nVrssfSzSeUpBaXW6Q6TKdDQ6DrXxPzFqLR5zfMyF0DpBpzE7/NC8pKx6wnrp0WT0Zv2y75wshAitIWx+jQUbS+zprgp1N/e0PFXBFmEMb7p2g7MfdCOOoPkILfC0CpZjwEMQ644L9nohLBS6ErNVqza+eQhZqKR8mB0TKlrOkRau9t6hXnqHYWxnA1bzOZ8jeFkdM+PtTH1I3+5lTIrVu4FbFaHhaqilzUkiYvm05PNdPzlbiKqbvjtMWj0biMVrIROpBqhf5/YII+LKg1KqcZws9Ul9EG5PWzNiOG4rl0nHZ/LsOGGlhpJKf8BualE0muk0x/QYtpSxwhwZfyIlegMgtLEGJLJTlC4IrlUuuF86sfkTjCW1EsFvPzOUqO8XVZBMi4cn/7ZBs/y28HOPq92o8fHCJjX1nPVfM+sgiUXjpEZE9eQASblRx5H8wcryc6g9+t38UoG3HSozgTth+yIHIYtEqCmLLMlAsD14Zg/0yU+XLetwt8gycolL2CLljCbyZGSu2LU684jbOhSoBeqd6I=
