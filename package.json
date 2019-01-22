@@ -37,6 +37,6 @@
     "test:dev": "npm run build:dev && jest",
     "test:debug": "node --inspect=9229 node_modules/jest/bin/jest.js --runInBand",
     "prepare": "jest --clearCache",
-    "release": "npm run build:prod && cross-env git tag v$npm_package_version && git push --tags && npm publish dist"
+    "release": "npm run build:prod && npm publish dist && cross-env git tag --sign v$npm_package_version && git push --tags"
   }
 }
