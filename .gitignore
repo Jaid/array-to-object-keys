@@ -9,6 +9,7 @@
 /yarn-error.log
 
 # npm
+/.npmrc
 /npm-debug.log
 /npm-debug.log.*
 
