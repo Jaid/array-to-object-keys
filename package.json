@@ -38,6 +38,6 @@
     "test:dev": "npm run build:dev && jest",
     "test:debug": "node --inspect=9229 node_modules/jest/bin/jest.js --runInBand",
     "prepare": "jest --clearCache",
-    "np": "npm run build:prod && np --yolo --no-yarn --contents dist"
+    "np": "npm run build:prod && node ../np/source/cli.js --no-yarn --contents dist"
   }
 }
