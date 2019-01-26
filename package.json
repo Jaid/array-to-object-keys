@@ -26,6 +26,7 @@
     "eslint": "^5.12.1",
     "eslint-config-jaid": "1.10.0",
     "jest": "24.0.0-alpha.12",
+    "opn-cli": "^4.0.0",
     "webpack": "^4.29.0",
     "webpack-cli": "^3.2.1",
     "webpack-config-jaid": "1.16.1"
@@ -37,6 +38,6 @@
     "test:dev": "npm run build:dev && jest",
     "test:debug": "node --inspect=9229 node_modules/jest/bin/jest.js --runInBand",
     "prepare": "jest --clearCache",
-    "release": "npm run build:prod && npm publish dist && cross-env git tag --sign v$npm_package_version && git push --tags"
+    "release": "npm run build:prod && npm publish dist && cross-env git tag v$npm_package_version && git push --tags && cross-env opn https://github.com/$npm_package_author_name/$npm_package_name/releases/new?tag=v$npm_package_version"
   }
 }
