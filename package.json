@@ -23,7 +23,7 @@
     "opn-cli": "^4.0.0",
     "webpack": "^4.29.0",
     "webpack-cli": "^3.2.1",
-    "webpack-config-jaid": "1.17.1"
+    "webpack-config-jaid": "1.18.0"
   },
   "scripts": {
     "build:prod": "cross-env NODE_ENV=production webpack",
