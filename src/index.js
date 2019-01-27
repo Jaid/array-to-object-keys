@@ -1,3 +1,5 @@
+/** @module array-to-object-keys */
+
 /**
  * Converts an array to an object with static keys and customizable values
  * @example

@@ -6,6 +6,7 @@ export default webpackConfigJaid({
     "license.*",
     "readme.md",
   ],
+  documentation: true,
   publishimo: {
     publishimoOptions: {
       fetchGithub: true,
