@@ -14,16 +14,16 @@ jobs:
     - zip -9 -r $MY_PACKAGE_NAME-v$MY_PACKAGE_VERSION-min.zip dist
     deploy:
     - provider: pages
-      local-dir: dist-jsdoc/html/$MY_PACKAGE_NAME/$MY_PACKAGE_VERSION
+      local_dir: dist-jsdoc/html/$MY_PACKAGE_NAME/$MY_PACKAGE_VERSION
       fqdn: $MY_PACKAGE_NAME.jaid.codes
-      skip-cleanup: true
-      github-token: $GITHUB_TOKEN # Permissions: public_repo, repo:status, repo_deployment
+      skip_cleanup: true
+      github_token: $GITHUB_TOKEN # Permissions: public_repo, repo:status, repo_deployment
     - provider: releases
       file:
       - dist/license.txt
       - dist/index.d.ts
       - $MY_PACKAGE_NAME-v$MY_PACKAGE_VERSION.zip
       - $MY_PACKAGE_NAME-v$MY_PACKAGE_VERSION-min.zip
-      skip-cleanup: true
-      api-key: $GITHUB_TOKEN # Permissions: public_repo, repo:status, repo_deployment
+      skip_cleanup: true
+      api_key: $GITHUB_TOKEN # Permissions: public_repo, repo:status, repo_deployment
       on: { tags: true }
