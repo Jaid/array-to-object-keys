@@ -7,20 +7,21 @@ jobs:
   include:
   - stage: Deploy
     before_deploy:
-    - zip -9 -r bundle.zip dist
+    - export MY_PACKAGE_NAME=$(node -e "console.log(require(\"./dist/package\").name)")
+    - export MY_PACKAGE_VERSION=$(node -e "console.log(require(\"./dist/package\").version)")
+    - zip -9 -r $MY_PACKAGE_NAME-v$MY_PACKAGE_VERSION.zip dist
     - ./node_modules/.bin/rimraf "dist/readme.*" "dist/**/*.d.ts" "dist/**/*.map"
-    - zip -9 -r bundle-min.zip dist
-    - env | grep "1.0.9"
+    - zip -9 -r $MY_PACKAGE_NAME-v$MY_PACKAGE_VERSION-min.zip dist
     deploy:
     - provider: pages
       local-dir: dist-jsdoc/html
-      fqdn: array-to-object-keys.jaid.codes
+      fqdn: $MY_PACKAGE_NAME.jaid.codes
       skip-cleanup: true
       github-token: $GITHUB_TOKEN # Permissions: public_repo, repo:status, repo_deployment
     - provider: releases
       files:
-      - bundle.zip
-      - bundle-min.zip
+      - $MY_PACKAGE_NAME-v$MY_PACKAGE_VERSION.zip
+      - $MY_PACKAGE_NAME-v$MY_PACKAGE_VERSION-min.zip
       skip-cleanup: true
       api-key: $GITHUB_TOKEN # Permissions: public_repo, repo:status, repo_deployment
       on: { tags: true }
