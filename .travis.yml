@@ -1,3 +1,25 @@
 language: node_js
 node_js: [node, lts/*]
 os: [linux, osx]
+cache:
+  npm: true
+  yarn: true
+  directories:
+  - $HOME/.cache/publishimo
+before_deploy:
+- zip -9 -r bundle.zip dist
+- rm dist/readme.* dist/**/*.d.ts dist/**/*.map
+- zip -9 -r bundle-min.zip dist
+deploy:
+- provider: pages
+  local-dir: dist-jsdoc/html
+  fqdn: array-to-object-keys.jaid.codes
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN # https://github.com/settings/tokens
+- provider: releases
+  files:
+  - bundle.zip
+  - bundle-min.zip
+  skip-cleanup: true
+  api-key: $GITHUB_TOKEN
+  on: { tags: true }
