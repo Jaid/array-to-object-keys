@@ -19,7 +19,9 @@ jobs:
       skip-cleanup: true
       github-token: $GITHUB_TOKEN # Permissions: public_repo, repo:status, repo_deployment
     - provider: releases
-      files:
+      file:
+      - dist/license.txt
+      - dist/index.d.ts
       - $MY_PACKAGE_NAME-v$MY_PACKAGE_VERSION.zip
       - $MY_PACKAGE_NAME-v$MY_PACKAGE_VERSION-min.zip
       skip-cleanup: true
