@@ -10,6 +10,7 @@ jobs:
     - zip -9 -r bundle.zip dist
     - ./node_modules/.bin/rimraf "dist/readme.*" "dist/**/*.d.ts" "dist/**/*.map"
     - zip -9 -r bundle-min.zip dist
+    - env | grep "1.0.9"
     deploy:
     - provider: pages
       local-dir: dist-jsdoc/html
