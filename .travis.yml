@@ -3,9 +3,6 @@ node_js: [node, lts/*]
 os: [linux, osx, windows]
 cache:
   npm: true
-  yarn: true
-  directories:
-  - $HOME/.cache/publishimo
 jobs:
   include:
   - stage: Deploy
