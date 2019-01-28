@@ -1,5 +1,5 @@
 {
-  "version": "1.0.8",
+  "version": "1.0.9",
   "author": "Jaid <jaid.jsx@gmail.com> (https://github.com/Jaid)",
   "babel": {
     "presets": [
@@ -24,7 +24,7 @@
     "rimraf": "^2.6.3",
     "webpack": "^4.29.0",
     "webpack-cli": "^3.2.1",
-    "webpack-config-jaid": "1.20.1"
+    "webpack-config-jaid": "1.20.2"
   },
   "scripts": {
     "clean": "rimraf dist dist-jsdoc",
