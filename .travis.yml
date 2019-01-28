@@ -8,18 +8,18 @@ cache:
   - $HOME/.cache/publishimo
 before_deploy:
 - zip -9 -r bundle.zip dist
-- rm dist/readme.* dist/**/*.d.ts dist/**/*.map
+- ./node_modules/.bin/rimraf "dist/readme.*" "dist/**/*.d.ts" "dist/**/*.map"
 - zip -9 -r bundle-min.zip dist
 deploy:
 - provider: pages
   local-dir: dist-jsdoc/html
   fqdn: array-to-object-keys.jaid.codes
   skip-cleanup: true
-  github-token: $GITHUB_TOKEN # https://github.com/settings/tokens
+  github-token: $GITHUB_TOKEN # Permissions: public_repo, repo:status, repo_deployment
 - provider: releases
   files:
   - bundle.zip
   - bundle-min.zip
   skip-cleanup: true
-  api-key: $GITHUB_TOKEN
+  api-key: $GITHUB_TOKEN # Permissions: public_repo, repo:status, repo_deployment
   on: { tags: true }
