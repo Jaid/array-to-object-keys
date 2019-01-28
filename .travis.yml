@@ -1,6 +1,6 @@
 language: node_js
 node_js: [node, lts/*]
-os: [linux, osx, windows]
+os: [linux, osx] # Windows doesn't work currently, I should try again in May 2019
 cache:
   npm: true
 jobs:
