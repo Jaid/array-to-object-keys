@@ -14,7 +14,7 @@ jobs:
     - zip -9 -r $MY_PACKAGE_NAME-v$MY_PACKAGE_VERSION-min.zip dist
     deploy:
     - provider: pages
-      local-dir: dist-jsdoc/html
+      local-dir: dist-jsdoc/html/$MY_PACKAGE_NAME/$MY_PACKAGE_VERSION
       fqdn: $MY_PACKAGE_NAME.jaid.codes
       skip-cleanup: true
       github-token: $GITHUB_TOKEN # Permissions: public_repo, repo:status, repo_deployment
