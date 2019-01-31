@@ -16,12 +16,13 @@ jobs:
     - zip -9 --recurse-paths ../$MIN_ZIP_NAME ** --exclude \*.d.ts --exclude readme.*
     deploy:
     - provider: pages
-      local_dir: dist-jsdoc/html/$MY_PACKAGE_NAME/$MY_PACKAGE_VERSION
+      local_dir: dist-jsdoc/$MY_PACKAGE_NAME/$MY_PACKAGE_VERSION
       fqdn: $MY_PACKAGE_NAME.jaid.codes
       skip_cleanup: true
       github_token: $GITHUB_TOKEN # Permissions: public_repo, repo:status, repo_deployment
     - provider: releases
       file:
+      - dist/package.json
       - dist/license.txt
       - dist/index.d.ts
       - $ZIP_NAME
