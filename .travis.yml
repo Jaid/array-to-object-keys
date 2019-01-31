@@ -7,6 +7,7 @@ jobs:
   include:
   - stage: Deploy
     before_deploy:
+    - npm run build:prod
     - export MY_PACKAGE_NAME=$(node -e "console.log(require('./dist/package').name)")
     - export MY_PACKAGE_VERSION=$(node -e "console.log(require('./dist/package').version)")
     - export ZIP_NAME=$MY_PACKAGE_NAME_v$MY_PACKAGE_VERSION.zip
@@ -14,6 +15,7 @@ jobs:
     - cd dist
     - zip -9 --recurse-paths ../$ZIP_NAME **
     - zip -9 --recurse-paths ../$MIN_ZIP_NAME ** --exclude \*.d.ts --exclude readme.*
+    - cd ..
     deploy:
     - provider: pages
       local_dir: dist-jsdoc/$MY_PACKAGE_NAME/$MY_PACKAGE_VERSION
