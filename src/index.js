@@ -1,4 +1,10 @@
-
+/**
+ * @typedef valueGenerator
+ * @type {function}
+ * @param {string} value The original array entry
+ * @param {number} index The index of the array entry (starts at 0)
+ * @returns {*}
+ */
 /**
  * Converts an array to an object with static keys and customizable values
  * @example
@@ -11,7 +17,7 @@
  * arrayToObjectKeys(["a", "b"], (key, index) => `value for ${key} #${index + 1}`)
  * // {a: "value for a #1", b: "value for b #2"}
  * @param {string[]} array Keys for the generated object
- * @param {function(value, index)|*} [valueGenerator] Optional function that sets the object values based on key and index
+ * @param {valueGenerator|*} [valueGenerator=null] Optional function that sets the object values based on key and index
  * @returns {Object<string, *>} A generated object based on the array input
  */
 export default (array, valueGenerator = null) => {
