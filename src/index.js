@@ -1,3 +1,4 @@
+/** @module array-to-object-keys */
 /**
  * @typedef valueGenerator
  * @type {function}
