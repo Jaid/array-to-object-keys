@@ -1,4 +1,5 @@
 /** @module array-to-object-keys */
+
 /**
  * @typedef valueGenerator
  * @type {function}
@@ -6,6 +7,7 @@
  * @param {number} index The index of the array entry (starts at 0)
  * @returns {*}
  */
+
 /**
  * Converts an array to an object with static keys and customizable values
  * @example

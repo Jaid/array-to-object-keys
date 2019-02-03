@@ -1,4 +1,7 @@
-import arrayToObjectKeys from "../dist"
+import path from "path"
+
+const indexModule = (process.env.MAIN ? path.resolve(process.env.MAIN) : path.join(__dirname, "..", "src")) |> require
+const {default: arrayToObjectKeys} = indexModule
 
 it("should run with 1 argument", () => {
   const result = arrayToObjectKeys(["a", "b"])
