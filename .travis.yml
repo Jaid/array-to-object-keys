@@ -12,7 +12,6 @@ jobs:
         - export MY_PACKAGE_VERSION=$(node -e "console.log(require('./dist/package').version)")
         - export ZIP_NAME=$MY_PACKAGE_NAME_v$MY_PACKAGE_VERSION.zip
         - export MIN_ZIP_NAME=$MY_PACKAGE_NAME_v$MY_PACKAGE_VERSION_min.zip
-        - rm .gitignore # https://stackoverflow.com/questions/36086110/deploy-a-specific-directory-to-npm-with-travis-ci#comment91176171_38834753
         - cd dist
         - zip -9 --recurse-paths ../$ZIP_NAME **
         - zip -9 --recurse-paths ../$MIN_ZIP_NAME ** --exclude \*.d.ts --exclude readme.*
