@@ -14,7 +14,7 @@ jobs:
         - export MIN_ZIP_NAME=${PKG_NAME}_v${PKG_VERSION}_min.zip
         - cd dist
         - zip -9 --recurse-paths ../$ZIP_NAME **
-        - zip -9 --recurse-paths ../$MIN_ZIP_NAME ** --exclude \*.d.ts --exclude readme.*
+        - zip -9 --recurse-paths ../$MIN_ZIP_NAME ** --exclude \*.d.ts --exclude readme.* --exclude \*.map
         - cd ..
       deploy:
         - provider: pages
