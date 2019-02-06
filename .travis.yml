@@ -28,10 +28,9 @@ jobs:
             - dist/*.d.ts
             - "*.zip"
           skip_cleanup: true
-          draft: true
-          name: Release $PKG_NAME $PKG_VERSION
+          name: $PKG_NAME $PKG_VERSION
           api_key: $GITHUB_TOKEN # Permissions: public_repo, repo:status, repo_deployment
-          #on: { tags: true }
+          on: { tags: true }
         - provider: script
           script: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc && npm publish dist
           skip_cleanup: true
