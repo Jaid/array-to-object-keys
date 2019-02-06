@@ -30,8 +30,9 @@ jobs:
             - $ZIP_NAME
             - $MIN_ZIP_NAME
           skip_cleanup: true
+          draft: true
           api_key: $GITHUB_TOKEN # Permissions: public_repo, repo:status, repo_deployment
-          on: { tags: true }
+          #on: { tags: true }
         - provider: script
           script: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc && npm publish dist
           skip_cleanup: true
