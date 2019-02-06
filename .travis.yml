@@ -10,11 +10,9 @@ jobs:
         - npm run build:prod
         - export PKG_NAME=$(node -e "console.log(require('./dist/package').name)")
         - export PKG_VERSION=$(node -e "console.log(require('./dist/package').version)")
-        - export ZIP_NAME=${PKG_NAME}_v$PKG_VERSION.zip
-        - export MIN_ZIP_NAME=${PKG_NAME}_v${PKG_VERSION}_min.zip
         - cd dist
-        - zip -9 --recurse-paths ../$ZIP_NAME **
-        - zip -9 --recurse-paths ../$MIN_ZIP_NAME ** --exclude \*.d.ts --exclude readme.* --exclude \*.map
+        - zip -9 --recurse-paths ../${PKG_NAME}_v$PKG_VERSION.zip **
+        - zip -9 --recurse-paths ../${PKG_NAME}_v${PKG_VERSION}_min.zip ** --exclude \*.d.ts --exclude readme.* --exclude \*.map
         - cd ..
       deploy:
         - provider: pages
@@ -23,15 +21,15 @@ jobs:
           skip_cleanup: true
           github_token: $GITHUB_TOKEN # Permissions: public_repo, repo:status, repo_deployment
         - provider: releases
+          file_glob: true
           file:
             - dist/package.json
-            - dist/license.txt
-            - dist/index.d.ts
-            - $ZIP_NAME
-            - $MIN_ZIP_NAME
+            - dist/license.*
+            - dist/*.d.ts
+            - "*.zip"
           skip_cleanup: true
           draft: true
-          name: abc
+          name: Release $PKG_NAME $PKG_VERSION
           api_key: $GITHUB_TOKEN # Permissions: public_repo, repo:status, repo_deployment
           #on: { tags: true }
         - provider: script
