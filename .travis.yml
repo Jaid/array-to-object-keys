@@ -33,8 +33,6 @@ jobs:
           api_key: $GITHUB_TOKEN # Permissions: public_repo, repo:status, repo_deployment
           on: { tags: true }
         - provider: script
-          script:
-            - echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" | tee .npmrc
-            - npm publish dist
+          script: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc && npm publish dist
           skip_cleanup: true
           on: { tags: true }
