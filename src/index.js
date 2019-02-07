@@ -3,20 +3,23 @@
 /**
  * @typedef valueGenerator
  * @type {function}
- * @param {string} value The original array entry
- * @param {number} index The index of the array entry (starts at 0)
- * @returns {*}
+ * @param {string} value Original array entry
+ * @param {number} index Index of the array entry (starts at 0)
+ * @returns {*} Anything that will be the object entry value
  */
 
 /**
  * Converts an array to an object with static keys and customizable values
  * @example
+ * import arrayToObjectKeys from "array-to-object-keys"
  * arrayToObjectKeys(["a", "b"])
  * // {a: null, b: null}
  * @example
+ * import arrayToObjectKeys from "array-to-object-keys"
  * arrayToObjectKeys(["a", "b"], "value")
  * // {a: "value", b: "value"}
  * @example
+ * import arrayToObjectKeys from "array-to-object-keys"
  * arrayToObjectKeys(["a", "b"], (key, index) => `value for ${key} #${index + 1}`)
  * // {a: "value for a #1", b: "value for b #2"}
  * @param {string[]} array Keys for the generated object
