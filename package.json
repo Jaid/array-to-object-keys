@@ -16,6 +16,7 @@
   "devDependencies": {
     "babel-jest": "^24.1.0",
     "babel-preset-jaid": "^2.10.0",
+    "caniuse-lite": "^1.0.30000935",
     "cross-env": "^5.2.0",
     "debug": "^4.1.1",
     "eslint": "^5.13.0",
