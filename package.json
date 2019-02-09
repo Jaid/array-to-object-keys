@@ -25,7 +25,7 @@
     "rimraf": "^2.6.3",
     "webpack": "^4.29.3",
     "webpack-cli": "^3.2.3",
-    "webpack-config-jaid": "^1.27.0"
+    "webpack-config-jaid": "^2.0.0"
   },
   "scripts": {
     "clean": "rimraf dist dist-jsdoc",
