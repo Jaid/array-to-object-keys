@@ -2,7 +2,7 @@
 .env
 
 # Node packages
-node_modules/
+node_modules
 
 # npm
 package-lock.json
@@ -22,8 +22,8 @@ yarn.lock
 yarn-error.log
 
 # Generated or temporary content
-dist/
-temp/
+dist
+temp
 
 # IDEs
 /.vscode/
