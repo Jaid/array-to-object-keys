@@ -22,9 +22,10 @@
  * import arrayToObjectKeys from "array-to-object-keys"
  * arrayToObjectKeys(["a", "b"], (key, index) => `value for ${key} #${index + 1}`)
  * // {a: "value for a #1", b: "value for b #2"}
+ * @function
  * @param {string[]} array Keys for the generated object
  * @param {valueGenerator|*} [valueGenerator=null] Optional function that sets the object values based on key and index
- * @returns {Object<string, *>} A generated object based on the array input
+ * @returns {object<string, *>} A generated object based on the array input
  */
 export default (array, valueGenerator = null) => {
   if (!Array.isArray(array)) {
