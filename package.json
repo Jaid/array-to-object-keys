@@ -13,6 +13,7 @@
   "jest": {
     "testEnvironment": "node"
   },
+  "dependencies": {},
   "devDependencies": {
     "babel-jest": "^24.1.0",
     "babel-preset-jaid": "^2.10.0",
