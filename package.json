@@ -20,7 +20,7 @@
     "caniuse-lite": "^1.0.30000938",
     "cross-env": "^5.2.0",
     "debug": "^4.1.1",
-    "eslint": "^5.14.0",
+    "eslint": "^5.14.1",
     "eslint-config-jaid": "^1.11.1",
     "jest": "^24.1.0",
     "opn-cli": "^4.0.0",
