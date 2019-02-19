@@ -30,6 +30,8 @@
   },
   "scripts": {
     "clean": "rimraf dist/ test/**/dist/",
+    "babel:prod": "rimraf dist/src-transpiled/production && cross-env NODE_ENV=production babel --out-dir dist/src-transpiled/production --source-maps true src",
+    "babel:dev": "rimraf dist/src-transpiled/production && babel --out-dir dist/src-transpiled/development src",
     "build:prod": "cross-env NODE_ENV=production webpack",
     "build:dev": "webpack",
     "test": "jest && npm run build:prod && cross-env MAIN=dist/package/production jest",
