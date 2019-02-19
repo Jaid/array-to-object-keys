@@ -12,7 +12,7 @@ jobs:
         - export PKG_VERSION=$(node -e "console.log(require('./dist/package/production/package').version)")
         - npm run test:coverage
         - cp -r dist/homepage/$PKG_NAME/$PKG_VERSION page
-        - cp -r dist/jest/coverage/lcov-report page
+        - cp -r dist/jest/coverage/lcov-report page/coverage
         - cd dist/package/production
         - zip -9 --recurse-paths ../../${PKG_NAME}_v$PKG_VERSION.zip **
         - zip -9 --recurse-paths ../../${PKG_NAME}_v${PKG_VERSION}_min.zip ** --exclude \*.d.ts --exclude readme.* --exclude \*.map
