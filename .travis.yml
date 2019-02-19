@@ -23,8 +23,8 @@ jobs:
         - provider: releases
           file_glob: true
           file:
+            - license.*
             - dist/package/production/package.json
-            - dist/package/production/license.*
             - dist/package/production/*.d.ts
             - "dist/*.zip"
           skip_cleanup: true
