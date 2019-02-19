@@ -16,7 +16,7 @@
   "dependencies": {},
   "devDependencies": {
     "babel-jest": "^24.1.0",
-    "babel-preset-jaid": "^2.11.0",
+    "babel-preset-jaid": "^3.0.0",
     "caniuse-lite": "^1.0.30000938",
     "cross-env": "^5.2.0",
     "debug": "^4.1.1",
