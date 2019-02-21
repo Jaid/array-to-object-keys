@@ -17,6 +17,8 @@
  * @returns {*} Anything that will be the object entry value
  */
 
+const debug = require("debug")("array-to-object-keys")
+
 const emptyReturn = {}
 
 /**
