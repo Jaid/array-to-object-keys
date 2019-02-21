@@ -12,7 +12,10 @@
   },
   "jest": {
     "testEnvironment": "node",
-    "coverageDirectory": "dist/jest/coverage"
+    "coverageDirectory": "dist/jest/coverage",
+    "collectCoverageFrom": [
+      "src/**"
+    ]
   },
   "dependencies": {},
   "devDependencies": {
