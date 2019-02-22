@@ -17,7 +17,7 @@
  * @returns {*} Anything that will be the object entry value
  */
 
-const debug = require("debug")("array-to-object-keys")
+const debug = require("debug")(_PKG_NAME)
 
 const emptyReturn = {}
 
