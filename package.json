@@ -4,7 +4,7 @@
   "author": "Jaid <jaid.jsx@gmail.com> (https://github.com/Jaid)",
   "babel": {
     "presets": [
-      "/home/jaid/dev/babel-preset-jaid/dist/babel-preset-jaid/index.js"
+      "jaid"
     ]
   },
   "eslintConfig": {
