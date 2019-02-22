@@ -76,10 +76,11 @@ export default (array, valueGenerator = null) => {
  * }
  * let result = await parallel(keys, valueGenerator)
  * result = { ".travis": 1672, license: 1099, package: 1948, readme: 132, "not-here": null }
+ * @async
  * @function
  * @param {string[]} array Keys for the generated object
  * @param {asyncValueGenerator|*} [valueGenerator=null] Async function that sets the object values based on key and index
- * @returns {object<string, *>} A generated object based on the array input
+ * @returns {Promise<object<string, *>>} A generated object based on the array input
  */
 export const parallel = async (array, valueGenerator = null) => {
   if (!Array.isArray(array) || !array.length) {
