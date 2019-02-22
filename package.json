@@ -2,20 +2,6 @@
   "private": true,
   "version": "1.2.1",
   "author": "Jaid <jaid.jsx@gmail.com> (https://github.com/Jaid)",
-  "eslintConfig": {
-    "extends": "jaid"
-  },
-  "jest": {
-    "testEnvironment": "node",
-    "coverageDirectory": "dist/jest/coverage",
-    "collectCoverageFrom": [
-      "src/**"
-    ],
-    "moduleNameMapper": {
-      "^root": "<rootDir>",
-      "^lib": "<rootDir>/src/lib"
-    }
-  },
   "dependencies": {
     "@babel/runtime": "^7.3.1",
     "debug": "^4.1.1"
