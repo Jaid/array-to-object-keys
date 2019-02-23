@@ -7,10 +7,10 @@
     "debug": "^4.1.1"
   },
   "devDependencies": {
-    "ajv": "^6.9.1",
+    "ajv": "^6.9.2",
     "babel-jest": "^24.1.0",
     "babel-plugin-pkg": "^1.0.1",
-    "babel-preset-jaid": "^5.0.1",
+    "babel-preset-jaid": "^5.1.0",
     "caniuse-lite": "^1.0.30000938",
     "cross-env": "^5.2.0",
     "eslint": "^5.14.1",
