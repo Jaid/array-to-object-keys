@@ -7,13 +7,13 @@
     "debug": "^4.1.1"
   },
   "devDependencies": {
-    "ajv": "^6.9.2",
+    "ajv": "^6.10.0",
     "babel-jest": "^24.1.0",
     "babel-plugin-pkg": "^1.0.1",
     "babel-preset-jaid": "^5.2.1",
-    "caniuse-lite": "^1.0.30000939",
+    "caniuse-lite": "^1.0.30000940",
     "cross-env": "^5.2.0",
-    "eslint": "^5.14.1",
+    "eslint": "^5.15.0",
     "eslint-config-jaid": "^1.12.0",
     "jest": "^24.1.0",
     "opn-cli": "^4.0.0",
