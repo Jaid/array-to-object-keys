@@ -10,7 +10,7 @@
     "ajv": "^6.10.0",
     "babel-jest": "^24.3.1",
     "babel-plugin-pkg": "^1.0.1",
-    "babel-preset-jaid": "^5.3.0",
+    "babel-preset-jaid": "^5.5.0",
     "caniuse-lite": "^1.0.30000942",
     "eslint": "^5.15.1",
     "eslint-config-jaid": "^1.12.0",
