@@ -11,7 +11,7 @@
     "babel-jest": "^24.5.0",
     "babel-plugin-pkg": "^1.0.1",
     "babel-preset-jaid": "^5.6.1",
-    "caniuse-lite": "^1.0.30000951",
+    "caniuse-lite": "^1.0.30000954",
     "eslint": "^5.15.3",
     "eslint-config-jaid": "^1.12.0",
     "jest": "^24.5.0",
