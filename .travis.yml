@@ -17,10 +17,12 @@ jobs:
         - export PKG_NAME=$(node -e "console.log(require('./dist/package/production/package').name)")
         - export PKG_VERSION=$(node -e "console.log(require('./dist/package/production/package').version)")
         - "[[ -d dist/homepage/$PKG_NAME/$PKG_VERSION ]] && npm run test:coverage && cp -r dist/homepage/$PKG_NAME/$PKG_VERSION page && cp -r dist/jest/coverage/lcov-report page/coverage || true"
+        - mkdir --parents dist/github
         - cd dist/package/production
-        - zip -9 --recurse-paths ../../${PKG_NAME}_v$PKG_VERSION.zip **
-        - zip -9 --recurse-paths ../../${PKG_NAME}_v${PKG_VERSION}_min.zip ** --exclude \*.d.ts --exclude readme.* --exclude \*.map
+        - zip -9 --recurse-paths ../../github/${PKG_NAME}_v$PKG_VERSION.zip **
+        - zip -9 --recurse-paths ../../github/${PKG_NAME}_v${PKG_VERSION}_min.zip ** --exclude \*.d.ts --exclude readme.* --exclude \*.map
         - cd ../../..
+        - cp dist/package/production/{*.d.ts,package.json,license.*} dist/github
       deploy:
         - provider: pages
           local_dir: page
@@ -30,11 +32,7 @@ jobs:
           on: { condition: -d pages }
         - provider: releases
           file_glob: true
-          file:
-            - license.*
-            - dist/package/production/package.json
-            - dist/package/production/*.d.ts
-            - "dist/*.zip"
+          file: dist/github/*
           skip_cleanup: true
           api_key: $GITHUB_TOKEN # Permissions: public_repo, repo:status, repo_deployment
           on: { tags: true }
