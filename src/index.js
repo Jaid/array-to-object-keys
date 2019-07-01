@@ -19,8 +19,6 @@
 
 const debug = require("debug")(_PKG_NAME)
 
-const emptyReturn = {}
-
 /**
  * Converts an array to an object with static keys and customizable values
  * @example
@@ -42,7 +40,7 @@ const emptyReturn = {}
  */
 export default (array, valueGenerator = null) => {
   if (!Array.isArray(array) || !array.length) {
-    return emptyReturn
+    return {}
   }
   const object = {}
   if (typeof valueGenerator === "function") {
@@ -84,7 +82,7 @@ export default (array, valueGenerator = null) => {
  */
 export const parallel = async (array, valueGenerator = null) => {
   if (!Array.isArray(array) || !array.length) {
-    return emptyReturn
+    return {}
   }
   const object = {}
   if (typeof valueGenerator === "function") {
