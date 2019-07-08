@@ -13,6 +13,7 @@
     "babel-jest": "^24.8.0",
     "babel-plugin-pkg": "^1.2.1",
     "babel-preset-jaid": "^6.8.1",
+    "browserslist-config-jaid-universal": "^2.0.0",
     "caniuse-lite": "^1.0.30000981",
     "eslint": "^6.0.1",
     "eslint-config-jaid": "^1.18.0",
