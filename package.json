@@ -1,5 +1,4 @@
 {
-  "private": true,
   "webpackConfigJaid": "universalLib",
   "version": "1.3.5",
   "author": "Jaid <jaid.jsx@gmail.com> (https://github.com/Jaid)",
@@ -32,5 +31,6 @@
     "test:coverage": "npm run test:dev -- --coverage --json --outputFile=dist/jest/stats.json",
     "test:dev": "NODE_ENV=test jest --runInBand",
     "test:debug": "DEBUG=\"$DEBUG,$(basename $PWD),$(basename $PWD):*\" NODE_ENV=test node --inspect=9229 node_modules/jest/bin/jest.js --runInBand"
-  }
+  },
+  "name": "array-to-object-keys"
 }
