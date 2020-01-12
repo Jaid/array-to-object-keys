@@ -36,24 +36,6 @@ yarn add array-to-object-keys@^1.3.5
 ```
 
 
-## Try it out
-
-
-
-Open a browser's JavaScript console and execute:
-
-```javascript
-const scriptElement = document.createElement("script");
-scriptElement.setAttribute("type", "text/javascript");
-scriptElement.setAttribute("src", "https://cdn.jsdelivr.net/npm/array-to-object-keys@1.3.5/index.js");
-document.querySelector("head").appendChild(scriptElement);
-```
-
-array-to-object-keys is now stored in the global variable `arrayToObjectKeys`. The following console expression should return something other than `"undefined"`.
-
-```javascript
-typeof arrayToObjectKeys.default
-```
 
 
 
