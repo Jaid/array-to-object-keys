@@ -1,9 +1,9 @@
 # array-to-object-keys
 
 
-<a href="https://raw.githubusercontent.com/Jaid/array-to-object-keys/master/license.txt"><img src="https://img.shields.io/github/license/Jaid/array-to-object-keys?style=flat-square" alt="License"/></a>  
-<a href="https://actions-badge.atrox.dev/Jaid/array-to-object-keys/goto"><img src="https://img.shields.io/endpoint.svg?style=flat-square&url=https%3A%2F%2Factions-badge.atrox.dev%2FJaid%2Farray-to-object-keys%2Fbadge" alt="Build status"/></a> <a href="https://github.com/Jaid/array-to-object-keys/commits"><img src="https://img.shields.io/github/commits-since/Jaid/array-to-object-keys/v1.3.5?style=flat-square&logo=github" alt="Commits since v1.3.5"/></a> <a href="https://github.com/Jaid/array-to-object-keys/commits"><img src="https://img.shields.io/github/last-commit/Jaid/array-to-object-keys?style=flat-square&logo=github" alt="Last commit"/></a> <a href="https://github.com/Jaid/array-to-object-keys/issues"><img src="https://img.shields.io/github/issues/Jaid/array-to-object-keys?style=flat-square&logo=github" alt="Issues"/></a>  
-<a href="https://npmjs.com/package/array-to-object-keys"><img src="https://img.shields.io/npm/v/array-to-object-keys?style=flat-square&logo=npm&label=latest%20version" alt="Latest version on npm"/></a> <a href="https://github.com/Jaid/array-to-object-keys/network/dependents"><img src="https://img.shields.io/librariesio/dependents/npm/array-to-object-keys?style=flat-square&logo=npm" alt="Dependents"/></a> <a href="https://npmjs.com/package/array-to-object-keys"><img src="https://img.shields.io/npm/dm/array-to-object-keys?style=flat-square&logo=npm" alt="Downloads"/></a>
+<a href="https://raw.githubusercontent.com/jaid/array-to-object-keys/master/license.txt"><img src="https://img.shields.io/github/license/jaid/array-to-object-keys?style=flat-square" alt="License"/></a> <a href="https://github.com/sponsors/jaid"><img src="https://img.shields.io/badge/<3-Sponsor-FF45F1?style=flat-square" alt="Sponsor array-to-object-keys"/></a>
+<a href="https://actions-badge.atrox.dev/jaid/array-to-object-keys/goto"><img src="https://img.shields.io/endpoint.svg?style=flat-square&url=https%3A%2F%2Factions-badge.atrox.dev%2Fjaid%2Farray-to-object-keys%2Fbadge" alt="Build status"/></a> <a href="https://github.com/jaid/array-to-object-keys/commits"><img src="https://img.shields.io/github/commits-since/jaid/array-to-object-keys/v1.3.5?style=flat-square&logo=github" alt="Commits since v1.3.5"/></a> <a href="https://github.com/jaid/array-to-object-keys/commits"><img src="https://img.shields.io/github/last-commit/jaid/array-to-object-keys?style=flat-square&logo=github" alt="Last commit"/></a> <a href="https://github.com/jaid/array-to-object-keys/issues"><img src="https://img.shields.io/github/issues/jaid/array-to-object-keys?style=flat-square&logo=github" alt="Issues"/></a>  
+<a href="https://npmjs.com/package/array-to-object-keys"><img src="https://img.shields.io/npm/v/array-to-object-keys?style=flat-square&logo=npm&label=latest%20version" alt="Latest version on npm"/></a> <a href="https://github.com/jaid/array-to-object-keys/network/dependents"><img src="https://img.shields.io/librariesio/dependents/npm/array-to-object-keys?style=flat-square&logo=npm" alt="Dependents"/></a> <a href="https://npmjs.com/package/array-to-object-keys"><img src="https://img.shields.io/npm/dm/array-to-object-keys?style=flat-square&logo=npm" alt="Downloads"/></a>
 
 **Converts an array to an object where the keys are the array entries and the values are customizable in a function.**
 
@@ -41,14 +41,13 @@ yarn add array-to-object-keys@^1.3.5
 
 
 
-
 ## Development
 
 
 
 Setting up:
 ```bash
-git clone git@github.com:Jaid/array-to-object-keys.git
+git clone git@github.com:jaid/array-to-object-keys.git
 cd array-to-object-keys
 npm install
 ```
