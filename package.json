@@ -34,5 +34,6 @@
     "prepareActionJest": "npm run build:prod"
   },
   "name": "array-to-object-keys",
-  "description": "Converts an array to an object where the keys are the array entries and the values are customizable in a function."
+  "description": "Converts an array to an object where the keys are the array entries and the values are customizable in a function.",
+  "funding": "https://github.com/sponsors/jaid"
 }
