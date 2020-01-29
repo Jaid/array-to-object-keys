@@ -1,5 +1,5 @@
-import path from "path"
 import fs from "fs"
+import path from "path"
 
 const indexModule = process.env.MAIN ? path.resolve(__dirname, "..", process.env.MAIN) : path.join(__dirname, "..", "src")
 const {default: arrayToObjectKeys, parallel} = require(indexModule)
@@ -57,7 +57,6 @@ it("should call fs functions in parallel", async () => {
     license: expect.any(Number),
     readme: expect.any(Number),
     package: expect.any(Number),
-    ".travis": expect.any(Number),
     "not-here": null,
   })
 })
