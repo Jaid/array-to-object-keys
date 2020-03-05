@@ -36,19 +36,22 @@ npm install --save @jaid/array-to-object-keys@^1.3.7
 
 ## Example
 
+
 ```javascript
 import arrayToObjectKeys from "array-to-object-keys"
 
 const array = ["a", "b"]
-const result = arrayToObjectKeys(array, (key, index) => `value for ${key} #${index + 1}`)
+const result = arrayToObjectKeys(array, (key, index) => {
+  return `#${index} - ${key}`
+})
 ```
 
-Variable `result` will now be:
+Variable `result` will be:
 
 ```javascript
 {
-  a: "value for a #1",
-  b: "value for b #2",
+  a: "#0 - a",
+  b: "#1 - b",
 }
 ```
 
@@ -85,26 +88,5 @@ npm run test
 
 
 ## License
-```text
-MIT License
-
+[MIT License](https://raw.githubusercontent.com/jaid/array-to-object-keys/master/license.txt)  
 Copyright © 2020, Jaid <jaid.jsx@gmail.com> (github.com/jaid)
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
