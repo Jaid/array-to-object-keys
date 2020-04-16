@@ -39,5 +39,18 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/jaid/array-to-object-keys"
-  }
+  },
+  "homepage": "https://array-to-object-keys.jaid.codes",
+  "keywords": [
+    "array",
+    "array-manipulations",
+    "array-map",
+    "convert",
+    "javascript-array",
+    "javascript-object",
+    "keys",
+    "lang",
+    "object",
+    "values"
+  ]
 }
