@@ -52,5 +52,6 @@
     "object",
     "utility",
     "values"
-  ]
+  ],
+  "type": "module"
 }
